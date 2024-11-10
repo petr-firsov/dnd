@@ -1,0 +1,1 @@
+export const cardBoxes = Array.from(document.querySelectorAll('.card-box'));
