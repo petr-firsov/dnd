@@ -1,4 +1,4 @@
-import { cardBoxes } from "./js/globals";
+import { cardBoxes } from "./globals";
 
 export function saveCards() {
     let formData = {};

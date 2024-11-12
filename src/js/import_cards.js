@@ -1,6 +1,6 @@
-import { cardBoxes } from "./js/globals";
-import { dragCard } from "./js/drag_card";
-import { removeCard } from "./js/remove_card.";
+import { cardBoxes } from "./globals";
+import { dragCard } from "./drag_card";
+import { removeCard } from "./remove_card.";
 
 export function importCards() {
     const json = localStorage.getItem('formData');
