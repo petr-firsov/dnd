@@ -51,9 +51,10 @@ body {
     box-shadow: 
     0 1px 1px grey,
     0 -2px white;
+    
     box-sizing: border-box;
-    margin-bottom: 10px;
     padding: 5px;
+    margin-bottom: 10px;
     font-size: 14px;
 
     display: flex;
@@ -73,11 +74,7 @@ body {
     cursor: grabbing;
     background-color: lightgrey;
     box-shadow: 
-    0 1px 3px black;
-}
-
-.card-text {
-    margin: 0;
+    0 1px 3px grey;
 }
 
 .remove-button {
@@ -109,18 +106,20 @@ body {
 }
 
 textarea {
-    box-sizing: border-box;
     min-width: 100%;
     max-width: 100%;
     min-height: 40px;
     max-height: 277px;
+    box-sizing: border-box;
     padding: 5px;
+
     border: 0;
     border-radius: 2px;
     box-shadow: 
     0 1px 1px grey,
     0 -2px white;
     outline: none;
+
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 

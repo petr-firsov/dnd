@@ -6,7 +6,7 @@ export function dropCard() {
             space.replaceWith(activeElement);
         }
             activeElement.classList.remove('dragged');
-            activeElement.style.width = '100%';
+            activeElement.style = undefined;
             activeElement = undefined;
     }
 }

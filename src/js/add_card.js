@@ -32,11 +32,7 @@ export function addCard() {
                 if (newCardInput.value) {
                     const newCard = document.createElement('div');
                     newCard.classList.add('card');
-
-                    const cardText = document.createElement('p');
-                    cardText.classList.add('card-text');
-                    cardText.innerText = newCardInput.value;
-                    newCard.appendChild(cardText);
+                    newCard.innerText = newCardInput.value;
                     
                     const remove = document.createElement('div');
                     remove.classList.add('remove-button');
