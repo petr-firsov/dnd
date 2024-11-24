@@ -24,7 +24,7 @@ export function newCardForms() {
         form.addEventListener('submit', event => {
             event.preventDefault();
             const targetForm = event.target;
-            if (targetForm.querySelector('textarea').value) {
+            if (targetForm.querySelector('textarea').value.trim()) {
                 const cardBox = targetForm.parentElement.querySelector('.card-box');
                 const newCardText = targetForm.querySelector('textarea').value;
                 cardBox.insertAdjacentHTML('beforeend', `
