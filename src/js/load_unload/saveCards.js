@@ -1,6 +1,5 @@
-import { cardBoxes } from "./globals";
-
 export function saveCards() {
+    const cardBoxes = Array.from(document.querySelectorAll('.card-box'));
     let formData = {};
     for (let i = 0; i < cardBoxes.length; i++) {
         let box = [];

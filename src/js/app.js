@@ -1,9 +1,13 @@
-import { addCard } from './add_card';
-import { saveCards } from './save_cards';
-import { importCards } from './import_cards';
+import { importCards } from './load_unload/importcards';
+import { saveCards } from './load_unload/saveCards';
+import { newCardForms } from './newCardForms';
+import { cardMovement } from './card_move_function/cardMovement';
 
-export function defaultBehaviour() {
-    addCard();
+export default function app() {
+    document.addEventListener('DOMContentLoaded', () => {
+        importCards();
+        newCardForms();
+    });
+    cardMovement();
     window.addEventListener('beforeunload', saveCards);
-    document.addEventListener('DOMContentLoaded', importCards);
 }

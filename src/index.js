@@ -1,9 +1,4 @@
 import './index.css';
-import { defaultBehaviour } from './js/app';
+import app from './js/app';
 
-defaultBehaviour();
-
-
-
-
-
+app();

@@ -1,8 +1,5 @@
-import { cardBoxes } from "./globals";
-import { dragCard } from "./drag_card";
-import { removeCard } from "./remove_card.";
-
 export function importCards() {
+    const cardBoxes = Array.from(document.querySelectorAll('.card-box'));
     const json = localStorage.getItem('formData');
     let formData = JSON.parse(json);
     if (formData) {
@@ -16,15 +13,16 @@ export function importCards() {
                 card.classList.add('card');
                 card.textContent = array[i][j];
 
-                const remove = document.createElement('div');
-                remove.classList.add('remove-button');
-                remove.innerHTML = '<div>&#x2715;</div>';
-                card.append(remove);
+                const removeBtn = document.createElement('div');
+                removeBtn.classList.add('remove-button');
+                removeBtn.innerHTML = '<div>&#x2715;</div>';
+                card.append(removeBtn);
+                removeBtn.addEventListener('click', () => {
+                    removeBtn.parentElement.remove();
+                });
 
                 cardBoxes[i].appendChild(card);
             }
         }
-        dragCard();
-        removeCard();
     }
 }
