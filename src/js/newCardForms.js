@@ -24,21 +24,22 @@ export function newCardForms() {
         form.addEventListener('submit', event => {
             event.preventDefault();
             const targetForm = event.target;
-            const cardBox = targetForm.parentElement.querySelector('.card-box');
-            const newCardText = targetForm.querySelector('textarea').value;
-            cardBox.insertAdjacentHTML('beforeend', `
-                <div class="card">
-                    ${newCardText}
-                    <div class="remove-button"></div>
-                </div>
-            `);
+            if (targetForm.querySelector('textarea').value) {
+                const cardBox = targetForm.parentElement.querySelector('.card-box');
+                const newCardText = targetForm.querySelector('textarea').value;
+                cardBox.insertAdjacentHTML('beforeend', `
+                    <div class="card">
+                        ${newCardText}
+                        <div class="remove-button"></div>
+                    </div>
+                `);
 
-            let removeBtn = cardBox.lastElementChild.querySelector('.remove-button');
-            removeBtn.innerHTML = '<div>&#x2715;</div>';
-            removeBtn.addEventListener('click', () => {
-                removeBtn.parentElement.remove();
-            });
-
+                let removeBtn = cardBox.lastElementChild.querySelector('.remove-button');
+                removeBtn.innerHTML = '<div>&#x2715;</div>';
+                removeBtn.addEventListener('click', () => {
+                    removeBtn.parentElement.remove();
+                });
+            }
             const targetAddLink = targetForm.parentElement.querySelector('.add-link');
             targetAddLink.removeAttribute('hidden', '');
             targetForm.remove();
