@@ -8,7 +8,7 @@ body {
     overflow-wrap: anywhere;
 }
 
-#whiteboard {
+div#whiteboard {
     display: flex;
     width: 800px;
     height: 60vh;
