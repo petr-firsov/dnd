@@ -1,4 +1,4 @@
-import { importCards } from './load_unload/importcards';
+import { importCards } from './load_unload/importCards';
 import { saveCards } from './load_unload/saveCards';
 import { newCardForms } from './newCardForms';
 import { cardMovement } from './card_move_function/cardMovement';
